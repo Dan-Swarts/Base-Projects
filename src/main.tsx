@@ -2,8 +2,14 @@ import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import App from "./App.tsx";
-import HomePage from "./pages/HomePage.tsx";
-import ErrorPage from "./pages/ErrorPage.tsx";
+
+import {
+  AboutPage,
+  ErrorPage,
+  HomePage,
+  JourneyPage,
+  ProjectsPage,
+} from "./pages/index.js";
 
 const router = createBrowserRouter([
   {
@@ -14,6 +20,18 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <HomePage />,
+      },
+      {
+        path: "About",
+        element: <AboutPage />,
+      },
+      {
+        path: "Journey",
+        element: <JourneyPage />,
+      },
+      {
+        path: "Projects",
+        element: <ProjectsPage />,
       },
     ],
   },

@@ -1,17 +1,7 @@
-import { useState } from "react";
-import AboutMeButton from "../components/ui/buttons/AboutMeButton";
-
-function HomePage() {
-  const [count, setCount] = useState(0);
-
+export default function HomePage() {
   return (
     <>
-      <AboutMeButton />
-      <button onClick={() => setCount((count) => count + 1)}>
-        count is {count}
-      </button>
+      <h1>HOME PAGE</h1>
     </>
   );
 }
-
-export default HomePage;

@@ -1,9 +1,10 @@
 "use client";
 
-import * as React from "react";
+import NavButton, { NavButtonProps } from "./buttons/NavButton";
+
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
-
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -12,34 +13,32 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
-const navItems = [
+const navItems: NavButtonProps[] = [
   { name: "Home", href: "/" },
-  { name: "About", href: "/" },
-  { name: "Services", href: "/" },
-  { name: "Contact", href: "/" },
+  { name: "About", href: "About" },
+  { name: "Projects", href: "Projects" },
+  { name: "Journey", href: "Journey" },
 ];
 
 export function Navbar() {
-  const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow-md">
+    <nav className="bg-white shadow-md fixed top-0 left-0 w-full">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
-          <div className="flex items-center">
+          <div id="logo" className="flex items-center">
             <Link to="/" className="flex-shrink-0 flex items-center">
               <span className="text-2xl font-bold text-gray-800">Logo</span>
             </Link>
           </div>
-          <div className="hidden sm:ml-6 sm:flex sm:items-center">
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.href}
-                className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
-              >
-                {item.name}
-              </Link>
+
+          <div
+            id="nav items"
+            className="hidden sm:ml-6 sm:flex sm:items-center"
+          >
+            {navItems.map((item: NavButtonProps) => (
+              <NavButton key={item.href} {...item} />
             ))}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
@@ -57,6 +56,7 @@ export function Navbar() {
               </DropdownMenuContent>
             </DropdownMenu>
           </div>
+
           <div className="flex items-center sm:hidden">
             <Button
               variant="ghost"
