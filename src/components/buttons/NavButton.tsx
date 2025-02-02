@@ -1,15 +1,16 @@
 "use client";
 
-import { useState } from "react";
-import { User } from "lucide-react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { ElementType } from "react";
 
 export interface NavButtonProps {
   name: string;
   href: string;
+  Icon: ElementType; // Add this line for the icon prop
 }
 
-export default function NavButton({ name, href }: NavButtonProps) {
+export default function NavButton({ name, href, Icon }: NavButtonProps) {
   const [isClicked, setIsClicked] = useState(false);
 
   return (
@@ -29,7 +30,7 @@ export default function NavButton({ name, href }: NavButtonProps) {
         }}
       >
         <span className="flex items-center justify-center space-x-2">
-          <User className="w-5 h-5" />
+          <Icon className="w-5 h-5" />
           <span>{name}</span>
         </span>
         <span className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
