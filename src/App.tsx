@@ -1,8 +1,16 @@
 import "./App.css";
-import HomePage from "./pages/HomePage";
+import { Outlet } from "react-router-dom";
+
+import HomePage from "./components/pages/HomePage";
+import AboutMeButton from "./components/ui/buttons/AboutMeButton";
 
 function App() {
-  return <HomePage />;
+  return (
+    <>
+      <AboutMeButton />
+      <HomePage />
+    </>
+  );
 }
 
 export default App;
