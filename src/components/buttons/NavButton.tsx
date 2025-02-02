@@ -1,17 +1,19 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ElementType } from "react";
+import { useLocation } from "react-router-dom";
 
 export interface NavButtonProps {
   name: string;
   href: string;
-  Icon: ElementType; // Add this line for the icon prop
+  Icon: ElementType;
 }
 
 export default function NavButton({ name, href, Icon }: NavButtonProps) {
-  const [isClicked, setIsClicked] = useState(false);
+  const location = useLocation();
+  const isActive = location.pathname === href;
 
   return (
     <Link to={href}>
@@ -22,12 +24,8 @@ export default function NavButton({ name, href, Icon }: NavButtonProps) {
         text-white font-semibold py-2 px-4 rounded-lg
         transition-all duration-300 ease-in-out
         transform hover:scale-105 hover:shadow-lg
-        ${isClicked ? "animate-pulse" : ""}
+        ${isActive ? "border-2 border-white" : ""}
       `}
-        onClick={() => {
-          setIsClicked(true);
-          setTimeout(() => setIsClicked(false), 300);
-        }}
       >
         <span className="flex items-center justify-center space-x-2">
           <Icon className="w-5 h-5" />
