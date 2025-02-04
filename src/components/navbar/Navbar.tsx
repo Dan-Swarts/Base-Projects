@@ -12,8 +12,6 @@ import {
   Github,
   Mails,
 } from "lucide-react";
-import { useState } from "react";
-import { Link } from "react-router-dom";
 
 const navItems: NavButtonProps[] = [
   { name: "Home", href: "/", Icon: User },
@@ -25,7 +23,7 @@ const navItems: NavButtonProps[] = [
 const contactItems: ContactButtonProps[] = [
   { href: "https://www.linkedin.com/in/daniel-swarts/", Icon: Linkedin },
   { href: "https://github.com/Dan-Swarts", Icon: Github },
-  { href: "danstraws@gmail.com", Icon: Mails },
+  { href: "mailto:danstraws@gmail.com", Icon: Mails },
 ];
 
 export default function Navbar() {
