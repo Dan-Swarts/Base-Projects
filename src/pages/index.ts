@@ -1,7 +1,7 @@
-import AboutPage from "./AboutPage";
-import ErrorPage from "./ErrorPage";
-import HomePage from "./HomePage";
-import JourneyPage from "./JourneyPage";
-import ProjectsPage from "./ProjectsPage";
+import AboutPage from "./about/AboutPage";
+import ErrorPage from "./error/ErrorPage";
+import HomePage from "./home/HomePage";
+import JourneyPage from "./journey/JourneyPage";
+import ProjectsPage from "./projects/ProjectsPage";
 
 export { AboutPage, ErrorPage, HomePage, JourneyPage, ProjectsPage };

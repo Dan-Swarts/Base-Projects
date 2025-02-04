@@ -1,8 +1,8 @@
 "use client";
 
-import NavButton, { NavButtonProps } from "./buttons/NavButton";
-import ContactButton, { ContactButtonProps } from "./buttons/ContactButton";
-import ProfilePicture from "./ui/ProfilePicture";
+import NavButton, { NavButtonProps } from "./NavButton";
+import ContactButton, { ContactButtonProps } from "./ContactButton";
+import ProfilePicture from "@/components/ui/ProfilePicture";
 import {
   User,
   EqualApproximately,
@@ -28,7 +28,7 @@ const contactItems: ContactButtonProps[] = [
   { href: "danstraws@gmail.com", Icon: Mails },
 ];
 
-export function Navbar() {
+export default function Navbar() {
   return (
     <nav className="bg-black text-white shadow-md fixed top-0 left-0 w-full">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
