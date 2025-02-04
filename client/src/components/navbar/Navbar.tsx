@@ -2,7 +2,7 @@
 
 import NavButton, { NavButtonProps } from "./NavButton";
 import ContactButton, { ContactButtonProps } from "./ContactButton";
-import ProfilePicture from "@/components/ui/ProfilePicture";
+import ProfilePicture from "./ProfilePicture";
 import {
   User,
   EqualApproximately,
