@@ -1,50 +1,80 @@
-# React + TypeScript + Vite
+# Base Client
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![MIT License](https://img.shields.io/badge/License-MIT-green)
 
-Currently, two official plugins are available:
+## Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project is a template react client to be used for future projects. It comes with tailwindcss and shadCN installed, making it easy to build components with V0. It comes with the react routing set up, allowing for easy page setup. It also comes with a template navbar component.
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- clone repo
 
-- Configure the top-level `parserOptions` property like this:
+```shell
+# step 1: clone this repository
+git clone https://github.com/Dan-Swarts/Base-Client.git
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+# step 2: install dependencies
+npm install
+
+# step 3:
+
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Showcase
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+![Add a screenshot](./public/Template%20Showcase.png)
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+## Features
+
+- Tailwindcss and shadCN installed, making it easy to build components with V0
+
+- React routing set up, allowing for easy page setup
+
+- Template navbar component
+
+## Tests
+
+- test 1
+
+```shell
+# How to run the first test
+
 ```
+
+- test 2
+
+```shell
+# How to run the second test
+
+```
+
+- test 3
+
+```shell
+# How to run the third test
+
+```
+
+## Questions
+
+If you have any questions about Book-Search-Engine, contact me at example@something.com.
+
+Check out my other projects at github.com.
+
+## Credits
+
+- [you](https://github.com)
+- [ me](https://github.com)
+- [ them](https://github.com)
+
+## Contributing
+
+> [!IMPORTANT]
+> Whether you have feedback on features, have encountered any bugs, or have suggestions for enhancements, we're eager to hear from you. Your insights help us make the Book-Search-Engine library more robust and user-friendly.
+
+Please feel free to contribute by [submitting an issue](https://github.com) or [joining the discussions](https://github.com). Each contribution helps us grow and improve.
+
+We appreciate your support and look forward to making our product even better with your help!
+
+If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
