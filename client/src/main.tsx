@@ -5,6 +5,7 @@ import App from "./App.tsx";
 
 import {
   AboutPage,
+  ConversationPage,
   ErrorPage,
   HomePage,
   JourneyPage,
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
       {
         path: "About",
         element: <AboutPage />,
+      },
+      {
+        path: "Conversation",
+        element: <ConversationPage />,
       },
       {
         path: "Journey",

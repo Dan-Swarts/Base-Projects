@@ -2,6 +2,7 @@ import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
 import dotenv from "dotenv";
+import routes from "./routes/index.js";
 dotenv.config();
 
 const app = express();
@@ -11,8 +12,15 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Serve static files from the client directory
-app.use(express.static(path.join(__dirname, "../../client/dist")));
-app.use("/static", express.static(path.join(__dirname, "../../client/public")));
+const clientPath = path.join(__dirname, "../../client/dist");
+app.use(express.static(clientPath));
+app.use(express.json()); // middleware:
+app.use(routes);
+
+// Handle React Routes
+app.get("*", (_req, res) => {
+  res.sendFile(path.join(clientPath, "index.html"));
+});
 
 // Start the server
 app.listen(PORT, () => {

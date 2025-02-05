@@ -11,11 +11,13 @@ import {
   Linkedin,
   Github,
   Mails,
+  MessageCircle,
 } from "lucide-react";
 
 const navItems: NavButtonProps[] = [
   { name: "Home", href: "/", Icon: User },
   { name: "About", href: "/About", Icon: EqualApproximately },
+  { name: "Conversation", href: "/Conversation", Icon: MessageCircle },
   { name: "Projects", href: "/Projects", Icon: FolderKanban },
   { name: "Journey", href: "/Journey", Icon: Plane },
 ];
@@ -28,7 +30,7 @@ const contactItems: ContactButtonProps[] = [
 
 export default function Navbar() {
   return (
-    <nav className="bg-black text-white shadow-md fixed top-0 left-0 w-full">
+    <nav className="bg-black text-white shadow-md sticky top-0 w-full">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div id="profile-headshot" className="flex-shrink-0">
